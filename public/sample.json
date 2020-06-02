@@ -1,0 +1,61 @@
+{
+    "android_login_scenarios": {
+      "scenario_count": "3",
+      "3": {
+        "name": "LOGIN_WRONG_USERNAME_STEPS_NUX",
+        "enabled": "TRUE",
+        "desc": "Login with a wrong username",
+        "testcase_id": "C28226"
+      },
+      "2": {
+        "name": "LOGIN_WRONG_PASSWORD_STEPS_NUX",
+        "enabled": "TRUE",
+        "desc": "Login with a wrong password",
+        "testcase_id": "C28227"
+      },
+      "1": {
+        "name": "LOGIN_WITH_REGISTERED_USER",
+        "enabled": "FALSE",
+        "desc": "Login with a registered username",
+        "testcase_id": "C28228"
+      }
+  
+    },
+  
+  
+  
+    "LOGIN_WRONG_USERNAME_STEPS_NUX": {
+                                          "1":{"name":"XPATH_BTN_NUXSIGNIN","action":"button","value": "xpath"},
+                                          "2":{"name":"XPATH_TXT_USERNAME","action":"text_input","value":"wrong_username"},
+                                          "3":{"name":"XPATH_SECURETXT_PASSWORD","action":"securetext_input","value":"password"},
+                                          "4":{"name":"XPATH_BTN_SIGNIN","action":"button","value":"xpath"},
+                                          "5":{"name":"XPATH_LOGIN_BCK_BTN","action":"button","value":"xpath"},
+                                          "stepcount":"5"
+                      },
+  
+  
+      "LOGIN_WRONG_PASSWORD_STEPS_NUX": {
+                                          "1":{"name":"XPATH_BTN_NUXSIGNIN","action":"button","value": "xpath"},
+                                          "2":{"name":"XPATH_TXT_USERNAME","action":"text_input","value":"username"},
+                                          "3":{"name":"XPATH_SECURETXT_PASSWORD","action":"securetext_input","value":"wrong_password"},
+                                          "4":{"name":"XPATH_BTN_SIGNIN","action":"button","value":"xpath"},
+                                          "5":{"name":"XPATH_LOGIN_BCK_BTN","action":"button","value":"xpath"},
+                                          "stepcount":"5"
+                                      },
+  
+  
+      "LOGIN_WITH_REGISTERED_USER":{
+  
+                                          "1":{"name":"XPATH_BTN_NUXSIGNIN","action":"button","value": "xpath"},
+                                          "2":{"name":"XPATH_TXT_USERNAME","action":"text_input","value":"username"},
+                                          "3":{"name":"XPATH_SECURETXT_PASSWORD","action":"securetext_input","value":"password"},
+                                          "4":{"name":"XPATH_BTN_SIGNIN","action":"button","value":"xpath"},
+                                          "5":{"name":"XPATH_BTN_ENABLELOCATION","action":"button","value": "xpath","skipflag":"enabled"},
+                                          "6":{"name":"XPATH_BTN_LOCATIONPERMISSION","action":"button","value": "xpath","skipflag":"enabled"},
+                                          "7":{"name":"XPATH_GOTIT","action":"button","value": "xpath","skipflag":"enabled"},
+                                          "8":{"name":"XPATH_BTN_SETTINGS","action":"expect","value":"xpath","condition":"isDisplayed","value1":"XPATH_BTN_SETTINGS","value2":"TRUE","expect_string": "Settings button is visible"},
+                                          "9":{"name":"XPATH_BTN_SETTINGS","action":"button","value":"xpath"},
+                                          "10":{"name":"XPATH_BTN_LOGOUT","action":"logout_button","value":"xpath"},
+                                          "stepcount":"10"
+                                  }
+  }

@@ -1,0 +1,25 @@
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 800px !important;
+    }
+        }
+
+.tablemodal table {
+    border-collapse: collapse;
+    padding:0.5rem;width: 100%; }
+.tablemodal td {
+        border: 1px solid #999;
+        padding: 0.3rem;
+        text-align: left;
+    }
+.tablemodal th {
+        border: 1px solid #999;
+        padding: 0.5rem;width: 180px;
+        text-align: left; 
+    }
+
+.datepickcss {
+    height: 38px;
+    min-width: 176px;
+    }    
+     
